@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>found</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/FYMA_java.js" defer></script></head>
+<body>
+    <nav>
+        <ul class="navigation">
+            <li class="menu"><a href="index.html">Log Out</a></li>
+            <li class="menu"><a class="active" href="search.html">Search</a></li>
+            <li class="menu-logo">
+                <img class="logo" src="images/Logo.png" alt="Logo" />
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <div class="container-Found">
+        <form class ="experienceFilter" action="experienceFilter">
+              <label for="Years_of_experience">experience</label>
+              <select name="Years_of_experience" id="Years_of_experience">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="more then 5">more then 5</option>
+                <option value="more then 10">more then 10</option>
+                <option value="more then 20">more then 20</option>
+              </select>
+              <input type="submit" value="Filter" />
+        </form>
+
+        <form class ="priceFilter"  action="priceFilter">
+              <label for="Price">Price</label>
+              <select name="Price" id="Price">
+                <option value="High to Low">High to Low</option>
+                <option value="Low to High">Low to High</option>
+              </select>
+              <input type="submit" value="Filter" />
+        </form>
+        <div id="Makeup-Artist1" >
+            <a href="profile.html">
+                        <img src="images/StefenyLor.png" width="120" height="100" ><br>
+                        <b class="Artists"><u>Stefany Ior</u></b>
+                        <p>I’m a professional makeup artist with 15 years of expirence.</p>
+                        <p>Experience: 15 Years | School :Yarin Shahaf | style: Brides </p>
+                        <p>Address: Av. Reuven 9, Gedara | Number: 0525381648</p>
+                        <br>
+            </a>
+        </div>
+        <div id="Makeup-Artist2" >
+                <img src="images/Courtney%20Henry.png" width="120" height="100" alt="" class="artists-images"><br>
+                <b class="Artists"><u>Courtney Henry</u></b>
+                <p>I’m a professional makeup artist with 7 years of expirence.</p>
+                <p>Experience: 7 Years | School :Yarin Shahaf | style: Brides </p>
+                <p>Address: Av. Yehuda 1, Gedara | Number: 0529442691</p>
+                <br>
+        </div>
+    </div>
+
+</body>
+</html>

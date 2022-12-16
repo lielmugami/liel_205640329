@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="navigation">
+            <li class="menu"><a href="index.html">Log Out</a></li>
+            <li class="menu-logo">
+                <img class="logo" src="images/Logo.png" alt="Logo" />
+            </li>
+        </ul>
+    </nav>
+
+    <form class="form-signin" action="search.html" method="POST">
+        <h1>Sign in </h1>
+        <label for="email"><b>Email:</b></label>
+        <input class="wide-input" type="email" placeholder="Enter Email" name="email" id="email"
+               required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <br><br>
+        <label for="psw"><b>Password:</b></label>
+        <input class="wide-input" type="password" placeholder="Enter Password" required minlength="8" name="psw" id="psw" required>
+        <br><br>
+        <input type="checkbox" checked="checked"> Remember me
+        <br><br>
+       <button type="submit" value="Sign in" >Login</button>
+    </form>
+
+</body>
+
+</html>
+

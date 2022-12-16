@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>signin</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+        <nav>
+            <ul class="navigation">
+                <li class="menu"><a href="index.html">Log Out</a></li>
+                <li class="menu-logo">
+                    <img class="logo" src="images/Logo.png" alt="Logo" />
+                </li>
+            </ul>
+        </nav>
+
+        <div class="signup-container">
+            <form class="form-signin" action="login.html" method="POST">
+                <h1>Sign up an account</h1>
+                    <label for="email"><b>Email:</b></label>
+                    <input class="wide-input" type="email" placeholder="Enter Email" name="email" id="email"
+                           required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <lable for=""><b>User Name:</b></lable>
+                    <input class="wide-input" type="text" placeholder="Enter Full Name" name="UserName" required id="UserName"
+                        value="">
+                    <label for="date"><b>Date of birth:</b></label>
+                    <input type="date" id="date" name="date" />
+                    <label><b>Phone:</b></label>
+                     <input type="text" name="phone" title="Error Message" pattern="[0-9]{1}[0-9]{9}"><br>
+                    <lable for=""><b>city:</b></lable>
+                    <input class="wide-input" type="text" placeholder="enter your city" name="city" required id="city" value="">
+                    <label><b>Gender:</b></label>
+                            <input type="radio" id="radio1" name="options"  value="a"> Male
+                            <input type="radio" id="radio2" name="options" value="b"> Female
+                            <input type="radio" id="radio3" name="options" value="c"> Other<br><br>
+                    <label for="psw"><b>Password:</b></label>
+                    <input class="wide-input" type="password" placeholder="Enter Password" required minlength="8" name="psw" id="psw"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <button type="submit" value="Sign in" >Sign in</button><br><br>
+            </form>
+
+            <div id="requirements">
+               <label><b>Password must contain the following:</b></label>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            </div>
+        </div>
+        <script src="static/FYMA_java.js"></script>
+</body>
+</html>
+
+

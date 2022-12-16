@@ -1,0 +1,508 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #000000;
+  background-image: url("../images/coverImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+  background-position: center center;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+a:visited,a{
+  text-decoration: none;
+  color: black;
+}
+
+/*----------------------------------------------------------------------------------------navigation------------------*/
+
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  /*opacity: 0.7;*/
+  background-color: rgb(255, 255, 255, 0);
+}
+
+.menu {
+  float: right;
+}
+
+.menu-logo {
+  float: left;
+}
+
+.menu a {
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu a:hover:not(.active) {
+  background-color: #e8d2d2;
+}
+
+.active {
+  background-color: palevioletred;
+}
+
+/*----------------------------------------------------------------------------------------homePage---------------------*/
+.logo {
+  float: left;
+  height: auto;
+  width: 70%;
+}
+
+.logo img {
+  width: 15rem;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+}
+
+#showcase {
+  margin-bottom: 5rem;
+}
+
+#showcase h1 {
+  font-size: 40px;
+  line-height: 1.3;
+  /*bottom: 100px;*/
+  position: relative;
+  animation: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+
+#showcase h2 {
+  font-size: 14px;
+  text-align: left;
+}
+
+@keyframes heading {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 1rem;
+  }
+}
+
+.content {
+  position: relative;
+  animation: content;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  text-align: right;
+}
+
+@keyframes content {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 1vw 2vw;
+  border: #000000 1px solid;
+  border-radius: 30px;
+  margin-top: 40px;
+  opacity: 0;
+  animation: btn;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+
+.btn:hover {
+  background-color: #000000;
+  color: palevioletred;
+}
+
+@keyframes btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/*-------------------------------------------------------------------------------------signup and Login page------------- */
+
+.wide-input {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 15px 18px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #030804;
+  color: hotpink;
+  padding: 14px 20px;
+  border-radius: 5px;
+  margin: 7px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.text-about {
+  color: black;
+  font-size: 22px;
+  text-align: center;
+}
+
+.GotoLoginButt{
+  background-color: #030804;
+  color: hotpink;
+  padding: 14px 20px;
+  border-radius: 5px;
+  margin: 7px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+.GotoLoginButt:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.signup-container
+{
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    grid-template-areas:
+    'form-signin'
+    'requirements'
+}
+
+.form-signin{
+    grid-area:form-signin;
+    text-align: left;
+    width: 30rem;
+    margin: auto;
+    color: black;
+}
+
+#requirements{
+  grid-area:requirements;
+    width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Validation Password*/
+.valid {
+  color: green;
+}
+
+.invalid {
+  color: red;
+}
+
+/*--sign in/up page for mobile-- */
+ @media screen and (max-width: 1000px) {
+    .form-signin {
+      font-size: 2.1em;
+      width: 52rem;
+    }
+   .form-signin button {
+     font-size: 0.8em
+   }
+   .invalid {
+      font-size: 1.8em;
+      width: 500px;
+      text-align: left;
+    }
+    .wide-input {
+      font-size: 0.8em;
+    }
+    #requirements, .label{
+        font-size: 1.6em;
+        width: 35rem;
+    }
+    .form-signin input{
+         font-size: 24px;
+    }
+ }
+/*------------------------------------------------------------------------------------Search Page------------------*/
+.container-search {
+  display: grid;
+  margin: 0px;
+  padding: 0px;
+  grid-template-areas:
+  'header-search'
+  'form-search'
+  'makeUpDate';
+  background-color: rgb(255, 255, 255, 0);
+}
+
+.form-search{
+    grid-area:form-search;
+      margin: auto;
+    text-align: center;
+    width: 28rem;
+}
+
+.header-search{
+  grid-area:header-search;
+  text-align: center;
+}
+
+.Location-search {
+  grid-area:Location-search;
+  text-align: left;
+}
+
+.style-search{
+ grid-area:style-search;
+  text-align: center;
+}
+
+.makeUpDate{
+  grid-area:makeUpDate ;
+}
+
+/*Search Button style*/
+.search-button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  width: 30%
+}
+
+.search-button:hover {
+  background-color: palevioletred;
+}
+
+.search-button:active {
+  background-color: palevioletred;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*Search Button style*/
+
+
+/*---search Page for mobile------*/
+  @media screen and (max-width: 1000px) {
+    .container-search {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3ch;
+      font-size: 40px;
+    }
+    .container-search form{
+      width: 40rem;
+    }
+    .container-search button{
+     font-size: 1.5em;
+      width: 50%;
+    }
+    .container-search input{
+     font-size: 1.2em;
+    }
+     .container-search h1{
+       font-size: 55px;
+     }
+  }
+
+/*----------------------------------------------------------------------------------Found Page------------------*/
+
+.container-Found {
+  display: grid;
+   grid-template-areas:
+  'priceFilter experienceFilter'
+  'Makeup-Artist1 Makeup-Artist1'
+  'Makeup-Artist2 Makeup-Artist2';
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255, 0);
+  row-gap: 1ch;
+}
+
+.priceFilter{
+  grid-area:priceFilter;
+  text-align: right;
+}
+
+.experienceFilter{
+  grid-area:experienceFilter;
+    text-align: left;
+}
+
+#Makeup-Artist1 {
+  grid-area: Makeup-Artist1;
+    text-align: center;
+}
+
+#Makeup-Artist2 {
+    grid-area: Makeup-Artist2;
+      text-align: center;
+}
+
+ @media screen and (max-width: 1000px) {
+   .priceFilter option, .priceFilter select,.priceFilter input{
+     font-size: 30px;
+       text-align: left;
+   }
+    .experienceFilter, .priceFilter {
+     font-size: 30px;
+   }
+   .experienceFilter option, .experienceFilter select, .experienceFilter input {
+     font-size: 30px;
+   }
+   .container-Found {
+     row-gap: 3ch;
+       font-size: 30px;
+   }
+   .container-Found img{
+     width: 30%;
+     height: 40%
+   }
+ }
+/*------------------------------------------------------------------------------profile Page------------------*/
+
+.container-profile {
+  display: grid;
+   grid-template-areas:
+   'artist-profile-header artist-profile-header artist-profile-header'
+  'artists-images artist-profile-Text artist-calender'
+  'artist-gallery-slideshow-container artist-gallery-slideshow-container artist-gallery-slideshow-container';
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  row-gap: 1ch;
+}
+
+.artist-profile-header{
+    grid-area: artist-profile-header;
+}
+
+.artist-profile-Text{
+    grid-area: artist-profile-Text;
+}
+
+.artist-calender{
+  grid-area: artist-calender;
+}
+
+.artist-gallery-slideshow-container{
+  grid-area:artist-gallery-slideshow-container;
+    position: relative;
+    margin: auto;
+}
+
+/*---profile Page for mobile------*/
+  @media screen and (max-width: 1000px) {
+    .container-profile {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2ch;
+    }
+  }
+
+ @media screen and (max-width: 1000px) {
+   .artist-calender input , .artist-calender label{
+     font-size: 40px;
+   }
+     .artist-profile-Text{
+         font-size: 20px;
+     }
+ }
+
+/*-------moving photo ---------*/
+.mySlides {display: none;}
+
+.Slideshow_img {
+    vertical-align: middle;
+    object-fit:cover;
+    height: 150px;
+    width: 100%;
+}
+
+/* Number text (1/4 etc) */
+.number-text {
+    color: #000000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: auto;
+}
+
+/* The dots indicate which photo are we now*/
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #000000;
+}
+
+.active, .dot:hover {
+  background-color: palevioletred;
+}
+
+/* Fading animation for the photo */
+.fade {
+    animation-name: fade;
+    animation-duration:4s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* the moving photo in phone */
+ @media screen and (max-width: 1000px) {
+     .Slideshow_img{
+         height: 250px;
+         width: 150%;
+         text-align: center;
+     }
+ }
+/*------------------------------profile Page------------------*/
