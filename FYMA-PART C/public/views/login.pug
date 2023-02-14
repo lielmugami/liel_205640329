@@ -1,0 +1,28 @@
+extends layout
+block content
+        form.form-signin(action='/findUser' method='GET')
+          h1 Sign in
+          label(for='email')
+            b Email:
+          input#email.wide-input(type='email' ,placeholder='Enter Email' ,name='email' ,required='' ,pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
+          br
+          br
+          label(for='password')
+            b Password:
+          input#password.wide-input(type='password', placeholder='Enter Password' ,required='' ,minlength='8' ,name='password')
+          br
+          br
+          input(type='checkbox' ,checked='checked')
+          |  Remember me
+          br
+          br
+          .errMessage #{SignInError}
+          input.submit(type='submit', name='submit', value='Login')
+          br
+
+          p.bottomLine
+                    | Don't have an account ?
+                    a(href="/SignUp")  Sign UP here
+
+
+

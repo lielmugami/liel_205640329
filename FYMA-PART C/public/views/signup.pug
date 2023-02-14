@@ -1,0 +1,49 @@
+extends layout
+block content
+      .signup-container
+        form.form-signin(action='/newUser' method='POST')
+          h1 Sign up an account
+          label(for='email')
+            b Email:
+          input#email.wide-input(type='email', placeholder='Enter Email', name='email', required='', pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
+          lable(for='')
+            b User Name:
+          input#UserName.wide-input(type='text', placeholder='Enter Full Name', name='userName', required='', value='')
+          label(for='date')
+            b Date of birth:
+          input#date(type='date', name='date', required='')
+          label
+            b Phone:
+          input(type='text', name='phone', title='Error Message', pattern='[0-9]{1}[0-9]{9}')
+          br
+          lable(for='')
+            b city:
+          input#city.wide-input(type='text', placeholder='enter your city', name='city', required='', value='')
+          label
+            b Gender:
+          input#radio1(type='radio', name='options', value='a')
+          |  Male
+          input#radio2(type='radio', name='options', value='b')
+          |  Female
+          input#radio3(type='radio', name='options', value='c')
+          |  Other
+          br
+          br
+          label(for='password')
+          b Password:
+          input#password.wide-input(type='password', placeholder='Enter Password' ,required ='', minlength='8', name='password', pattern="(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}")
+          input.submit(type='submit' name='submit' value='Submit')
+          .errMessage #{theUserExist}
+          br
+        #requirements
+          label
+            b Password must contain the following:
+          p#letter.invalid
+            b A lowercase letter
+          p#capital.invalid
+            b A capital letter
+          p#number.invalid
+            b A number
+          p#length.invalid
+            b Minimum 8 characters
+          script(src='FYMA_java.js')

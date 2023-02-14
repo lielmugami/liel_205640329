@@ -1,0 +1,11 @@
+email,artistName ,phoneNumber ,latitude ,longitude,city ,yearsOfExperience ,address ,profilePicture ,study 
+suzan12@gmail.com,Suzi Levy,548226503,32.07407248,34.78043908,Tel-Aviv,2,Allenby 1,images/Artist1.png,Yarin-Shahaf
+loren@gmail.com,Loren Cohen,527894210,32.07245042,34.77047379,Tel-Aviv,3,Bialik 13,images/Artist2.png,Yarin-Shahaf
+din33@gmail.com,Dini Levy,556985231,32.07404521,34.78039617,Tel-Aviv,4,Dizengoff 11,images/Artist3.png,Yarin-Shahaf
+RommyM@gmail.com,Rommy Moyal,502223659,31.81199518,34.78499064,Gedera,10,Khatsav St 3,images/Artist4.png,Yarin-Shahaf
+Lior@gmail.com,Lior Eitan,547878421,31.81795158,34.77758537,Gedera,8,Lilienblum St 10,images/Artist5.png,Yarin-Shahaf
+Shir@gmail.com,Shir Or,525381648,31.87947011,34.81817724,Rehovot,8,herzel 1,images/Artist6.png,Yarin-Shahaf
+MikyBoganim1@gmail.com,Miky Boganim,552698888,31.88209758,31.88209758,Rehovot,6,herzel 15,images/Artist7.png,Ravit-Asaf
+CL@gmail.com,Coral Eli,523213121,32.08355306,34.81008973,Ramat-Gan,2,HaMelech Yanai St 5,images/Artist8.png,Ravit-Asaf
+shirli@gmail.com,Shirli Lilo,523215555,31.26333789,34.79796128,Beer-sheva,2,Yitzhack I. Rager Blvd 111,images/Artist9.png,Ravit-Asaf
+test1@gmail.com,yanay levi,523896555,32.08337036,34.80983717,Ramat-Gan,1,HaMelech Yanai St 3,images/Artist10.png,Yarin-Shahaf

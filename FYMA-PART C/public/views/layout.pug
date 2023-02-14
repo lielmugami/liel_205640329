@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    if title
+      title FYMA - #{title}
+    else
+      title FYMA
+    link(rel="stylesheet", href="style.css")
+    body
+    nav
+      ul.navigation
+        if isAuthenticared
+          li.menu(style='display:inline;')
+            a.nav-background(href='/logout') Logout
+          li.menu(style='display:inline;')
+            a.nav-background(href='/search') Search
+
+
+        li.menu(style='display:inline;')
+          a.nav-background(href='/home-page') Home
+        li.menu(style='display:inline;')
+          a.nav-background(href='/about-us') About us
+        li.menu-logo
+          img.logo(src='images/Logo.png' alt='Logo')
+    script(src="FYMA_java.js", defer='')
+  block content
+

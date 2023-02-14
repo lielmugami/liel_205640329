@@ -1,0 +1,90 @@
+Requirements
+1.  Modules: express, mysql2, path, pug, body-parser, cookie-parser,csv2json,express-session,save
+
+2.  
+a. Create path:
+createUserTable/
+CreateMakeUpArtistTable/
+createSearchesTable/
+CreateMakeUpSpecialityTable/
+CreateMakeUpArtistDatesTable/
+
+b. Insert path:
+insertDataToUsersTable/
+insertDataIntoMakeUpArtistTable/
+insertDataIntoSearchesTable/
+insertDataIntoMakeUpSpecialityTable/
+insertDataIntoMakeUpArtistsDatesTable/
+
+c. Select path:
+show table users:/ShowUsersTable
+show table Make Up Artists:/ShowMakeUpArtistsTable
+show table Make Up Artists Speciality: /ShowMakeUpSpecialityTable
+show table Make Up Artists Dates: /ShowMakeUpArtistsDatesTable
+show table Searches: /ShowSearchesTable
+
+d. Delete path: /dropMakeUpArtistsDatesTable
+dropMakeUpSpecialityTable/
+dropSearchesTable/
+dropMakeUpArtistTable/
+dropUsersTable/
+
+3. Table creation syntax:
+
+CREATE TABLE IF NOT EXISTS USERS (
+        email VARCHAR(50) NOT NULL PRIMARY KEY, 
+        userName VARCHAR(50) NOT NULL,
+        Date_of_birth date ,
+        phone VARCHAR(15) NOT NULL,
+        city VARCHAR(30),
+        Gender VARCHAR(15),
+        password VARCHAR(50) NOT NULL, 
+        TimeStamp datetime NOT NULL
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS makeUpArtists (
+        email varchar(255) NOT NULL PRIMARY KEY, 
+        artistName varchar(50) NOT NULL,
+        phoneNumber varchar(100) NOT NULL,
+        latitude float NOT NULL,
+        longitude float NOT NULL,
+        city varchar(255) NOT NULL, 
+        yearsOfExperience real NOT NULL,
+        address varchar(255) NOT NULL,
+        profilePicture nvarchar(100) NOT NULL,
+        study varchar(100) NOT NULL
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+`CREATE TABLE IF NOT EXISTS Searches (
+        userEmail varchar(255) NOT NULL,
+        city varchar(100),
+        latitude float,
+        longitude float,
+        makeUpSpeciality varchar(100),
+        uploadedOn datetime NOT NULL,
+        CONSTRAINT PK_Searches PRIMARY KEY (userEmail, uploadedOn),
+        FOREIGN KEY (userEmail) REFERENCES USERS (email)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;`
+
+
+
+CREATE TABLE IF NOT EXISTS makeUpSpecialitys (
+        makeUpArtistEmail varchar(255) NOT NULL, 
+        makeUpSpeciality varchar(100) NOT NULL,
+        price int NOT NULL,
+        CONSTRAINT PK_Specialit PRIMARY KEY (makeUpArtistEmail, makeUpSpeciality),
+        FOREIGN KEY (makeUpArtistEmail) REFERENCES makeUpArtists (email)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE IF NOT EXISTS makeUpArtistsDates (
+        makeUpArtistEmail varchar(255) NOT NULL, 
+        datesNotAvailable date NOT NULL,
+        CONSTRAINT PK_Specialit PRIMARY KEY (makeUpArtistEmail, datesNotAvailable),
+        FOREIGN KEY (makeUpArtistEmail) REFERENCES makeUpArtists (email)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+

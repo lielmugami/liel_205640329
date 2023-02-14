@@ -1,0 +1,79 @@
+extends layout
+block content
+  body(onload='showMySlides()')
+    .container-profile
+        .artist-profile-header
+          h1
+            u #{artist.artistName}
+          br
+          br
+        .artists-images
+          img.artists-images(src=artist.profilePicture alt='')
+        .artist-profile-Text
+          b Email Address:
+          |  #{artist.email}
+          br
+          br
+          b city:
+          |  #{artist.city}
+          br
+          br
+          b Address:
+          |  #{artist.address}
+          br
+          br
+          b Tel:
+          |  #{artist.phoneNumber}
+          br
+          br
+          b Makeup Specialty:
+          |  #{artist.makeUpSpeciality}
+          br
+          br
+          b years of Experience:
+          |  #{artist.yearsOfExperience}
+          br
+          br
+          b study at:
+          |  #{artist.study}
+        .artist-calender
+            label
+              u Schedule an appointment:
+            br
+            br
+            form(action='/bookMakeUp' method='POST')
+                label(for='date')
+                    b select a date:
+                input#date(type='date' name='date' required ='')
+                input#email(type='hidden' name='email' value=`${artist.email}` )
+                input.submit(type='submit' name='submit' value='Book')
+
+        .artist-gallery-slideshow-container
+            label
+              b  Make up Gallery:
+            .mySlides.fade
+                .number-text 1 / 5
+                  img.Slideshow_img(src='images/Gallery1.png' alt='')
+            .mySlides.fade
+                .number-text 2 / 5
+                  img.Slideshow_img(src='images/Gallery2.png' alt='')
+            .mySlides.fade
+                .number-text 3 / 5
+                  img.Slideshow_img(src='images/Gallery3.png' alt='')
+            .mySlides.fade
+                .number-text 4 / 5
+                  img.Slideshow_img(src='images/Gallery4.png' alt='')
+            .mySlides.fade
+                .number-text 5 / 5
+                    img.Slideshow_img(src='images/StefenyLor.png' alt='')
+            .slideshow-header
+                  span.dot
+                  span.dot
+                  span.dot
+                  span.dot
+                  span.dot
+                  span.dot
+                  span.dot
+
+
+
